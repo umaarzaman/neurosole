@@ -1,16 +1,44 @@
-# React + Vite
+# NeuroSole — Interactive Sneaker Shopping Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based sneaker storefront with two browsing modes: an exploratory product experience and a conventional shop flow. The application includes cart and checkout routes.
 
-Currently, two official plugins are available:
+## Features
+- **Explore and Shop modes** — switch between an exploratory experience and the product-shopping view.
+- **Cart interface** — shared cart state through a React context provider.
+- **Checkout route** — dedicated checkout screen.
+- **Animated interface** — Framer Motion transitions.
+- **Client-side routing** — React Router routes the home and checkout views.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- React 19, Vite
+- React Router
+- Framer Motion
+- Lucide React
 
-## React Compiler
+## Run Locally
+Requirements: Node.js and npm.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Vite prints the local development URL in the terminal.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quality Checks
+```bash
+npm run lint
+npm run build
+```
+
+## Project Structure
+```text
+src/
+├── components/   # Navigation, cart, explore/shop and checkout UI
+├── context/      # Shared application state
+├── App.jsx       # Route and application composition
+└── main.jsx      # React entry point
+```
+
+## Notes
+This repository contains the frontend application. Review the current source and deployment configuration before using it as a production commerce system; payment processing, inventory, and order fulfilment should not be assumed from the presence of a checkout screen.
